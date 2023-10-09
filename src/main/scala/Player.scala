@@ -1,9 +1,9 @@
 import scala.collection.mutable.ArrayBuffer
 
-class Player(val name: String, var health: Int, val strength: Int, val defense: Int, val inventory: ArrayBuffer[String])
+class Player(name: String, health: Int, strength: Int, defense: Int, inventory: ArrayBuffer[String])
   extends Character(name, health, strength, defense, inventory) {
   def displayInventory(): Unit = {
-    inventory.foreach(x => println(s"$x"))
+    inventory.foreach(displayItem => println(s"$displayItem"))
   }
 
   def useItem(item: String): String = {
